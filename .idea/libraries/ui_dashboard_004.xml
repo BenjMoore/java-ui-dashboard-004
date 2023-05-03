@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ui-dashboard-004">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/part 1/ui-dashboard-004/miglayout-4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/part 1/ui-dashboard-004/TimingFramework-0.55.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
