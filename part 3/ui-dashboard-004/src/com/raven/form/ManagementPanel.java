@@ -21,6 +21,7 @@ public class ManagementPanel extends javax.swing.JPanel {
         jDialog1 = new javax.swing.JDialog();
         jMenu1 = new javax.swing.JMenu();
         list1 = new java.awt.List();
+        jDialog2 = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -59,6 +60,17 @@ public class ManagementPanel extends javax.swing.JPanel {
 
         jMenu1.setText("jMenu1");
 
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setBackground(new java.awt.Color(204, 204, 204));
         setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -70,7 +82,31 @@ public class ManagementPanel extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/setting.png"))); // NOI18N
         jLabel2.setText("Custom Values");
 
-        Voltageinput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Default", "10,000V", "20,000V", "30,000V", "40,000V", "40,000V", "50,000V", "60,000V", "70,000V", "80,000V", "90,000V", "100,000V", "110,000V", "120,000V", "130,000V", "140,000V", "150,000V", "160,000V", "170,000V", "180,000V", "190,000V", "200,000V", "210,000V", "220,000V" }));
+        Voltageinput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Default",
+            "10,000V"
+            , "20,000V"
+            , "30,000V"
+            , "40,000V"
+            , "40,000V"
+            , "50,000V"
+            , "60,000V"
+            , "70,000V"
+            , "80,000V"
+            , "90,000V"
+            , "100,000V"
+            , "110,000V"
+            , "120,000V"
+            , "130,000V"
+            , "140,000V"
+            , "150,000V"
+            , "160,000V"
+            , "170,000V"
+            , "180,000V"
+            , "190,000V"
+            , "200,000V"
+            , "210,000V"
+            , "220,000V"
+        }));
         Voltageinput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltageinputActionPerformed(evt);
@@ -81,28 +117,27 @@ public class ManagementPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(147, 147, 147))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Voltageinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(Voltageinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(41, 41, 41)
+                .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(Voltageinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
@@ -371,6 +406,7 @@ public class ManagementPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> Voltageinput;
     private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
