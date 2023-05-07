@@ -3,7 +3,7 @@ package com.raven.main;
 import com.raven.component.Menu;
 import com.raven.event.EventMenuSelected;
 import com.raven.form.Form1;
-import com.raven.form.Form2;
+import com.raven.form.ManagementPanel;
 import com.raven.model.ModelMenu;
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -51,18 +51,16 @@ public class Main extends javax.swing.JFrame {
         menu.setEvent(new EventMenuSelected() {
             @Override
             public void selected(int index) {
-                if (index == 0) {
+                if (index ==   0) {
                     showForm(new Form1());
                 } else if (index == 1) {
-                    showForm(new Form2());
+                    showForm(new ManagementPanel());
                 }
             }
         });
-        menu.addMenu(new ModelMenu("Profile", new ImageIcon(getClass().getResource("/com/raven/icon/user.png"))));
-        menu.addMenu(new ModelMenu("Message", new ImageIcon(getClass().getResource("/com/raven/icon/message.png"))));
-        menu.addMenu(new ModelMenu("Report", new ImageIcon(getClass().getResource("/com/raven/icon/report.png"))));
-        menu.addMenu(new ModelMenu("Setting", new ImageIcon(getClass().getResource("/com/raven/icon/setting.png"))));
-        menu.addMenu(new ModelMenu("Key", new ImageIcon(getClass().getResource("/com/raven/icon/key.png"))));
+        menu.addMenu(new ModelMenu("Graphing", new ImageIcon(getClass().getResource("/com/raven/icon/report.png"))));
+        menu.addMenu(new ModelMenu("Management", new ImageIcon(getClass().getResource("/com/raven/icon/key.png"))));
+        menu.addMenu(new ModelMenu("Settings", new ImageIcon(getClass().getResource("/com/raven/icon/setting.png"))));
         body.add(menu, "w 50!");
         body.add(main, "w 100%");
         TimingTarget target = new TimingTargetAdapter() {
